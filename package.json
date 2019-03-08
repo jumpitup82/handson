@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jumpitup82/handson#readme",
   "dependencies": {
-    "pg-promise": "^8.6.3"
+    "pg-promise": "^8.6.3",
+    "uuid": "^3.3.2"
   }
 }
