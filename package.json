@@ -19,7 +19,7 @@
   "dependencies": {
     "pg-promise": "^8.6.3",
     "uuid": "^3.3.2",
-    "amqp": "^0.2.7",
-    "amqplib": "^0.5.3"
+    "amqplib": "^0.5.3",
+    "redis": "^2.8.0"
   }
 }
