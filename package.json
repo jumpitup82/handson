@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/jumpitup82/handson#readme",
   "dependencies": {
+    "amqp": "^0.2.7",
+    "amqplib": "^0.5.3",
     "pg-promise": "^8.6.3"
   }
 }
