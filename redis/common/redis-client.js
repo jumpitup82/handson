@@ -10,7 +10,6 @@ class RedisClient {
 	}
 
 	_getKeyString(key) {
-		const me = this;
 		let keyString = key;
 		// Redis key must be a string (Otherwise, it is converted internally using toString() method)
 		if (typeof key === 'object') {
@@ -21,7 +20,6 @@ class RedisClient {
 	}
 
 	async set(key, val, expireTime) {
-		let me = this;
 		expireTime = expireTime || this.defaultExpTime;
 		if (_.isNil(key) || _.isNil(val)) {
 			return;
@@ -93,6 +91,18 @@ class RedisClient {
 		}
 	}
 
+	async getSet(set) {
+		if (this.redisConnection) {
+			try {
+				return this.redisCoClient.smembers(set);
+			} catch (err) {
+				return null;
+			}
+		} else {
+			return null;
+		}
+	}
+
 	async setRemove(set, member) {
 		if (this.redisConnection) {
 			try {
@@ -118,10 +128,9 @@ class RedisClient {
 					await this.redisCoClient.quit();
 				}
 			}
-			/* eslint-disable */
 		} catch (err) {
+			console.log(err);
 		}
-		/* eslint-enable */
 	}
 }
 
