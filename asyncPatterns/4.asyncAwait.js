@@ -1,6 +1,9 @@
 const path = './data';
+const { readdir, readFile } = require('fs');
+const { promisify } = require('util');
 
-const { readDirAsync, readFileAsync } = require('./util/fsPromise');
+const readDirAsync = promisify(readdir);
+const readFileAsync = promisify(readFile);
 
 (async () => {
     const files = await readDirAsync(path);
@@ -14,3 +17,4 @@ const { readDirAsync, readFileAsync } = require('./util/fsPromise');
     }
 })();
 
+// serial, parallel
