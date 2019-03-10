@@ -14,5 +14,3 @@ co(function* () {
         console.log(text);
     }
 });
-
-
