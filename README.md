@@ -22,6 +22,8 @@
     * amqp(node-amqp)는 channel 개념이 숨겨져있다. update가 느리다.
 
 #### redis
+redis에서 value의 타입이 object인 경우 JSON.stringify를 통해 json 문자열로 업데이트한다.
+
 1. redis 설정
   - https://confluence.samsungmtv.com/display/GRSDS/mtv++Setting-up+Redis
   - $ docker exec -it redis bash
