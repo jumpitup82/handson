@@ -14,7 +14,6 @@ describe('redis', () => {
 		await redisClient.close();
 	});
 
-
 	it('when add value by key, then value should be found by get', async () => {
 		await redisClient.set(KEY, 'escape');
 		const result = await redisClient.get(KEY);
