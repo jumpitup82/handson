@@ -1,6 +1,6 @@
-const MessagePublisher = require('../../../lib/rabbitMQ/messaging/queue/message-producer'),
-		MessageConsumer = require('../../../lib/rabbitMQ/messaging/queue/message-consumer'),
-		rabbitMqConnection = require('../../../lib/rabbitMQ/messaging/rabbitmq-connection');
+const MessagePublisher = require('../../../middleware/rabbitMQ/messaging/queue/message-producer'),
+		MessageConsumer = require('../../../middleware/rabbitMQ/messaging/queue/message-consumer'),
+		rabbitMqConnection = require('../../../middleware/rabbitMQ/messaging/rabbitmq-connection');
 
 describe('rabbitMQ sample', async () => {
 	const QUEUE = 'sample';

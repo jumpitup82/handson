@@ -1,6 +1,6 @@
-const workerConfig = require('../../../lib/rabbitMQ/worker/order-notification-worker-config'),
-		rabbitMqConnection = require('../../../lib/rabbitMQ/messaging/rabbitmq-connection'),
-		QueueWorker = require('../../../lib/rabbitMQ/worker/queue-worker');
+const workerConfig = require('../../../middleware/rabbitMQ/worker/order-notification-worker-config'),
+		rabbitMqConnection = require('../../../middleware/rabbitMQ/messaging/rabbitmq-connection'),
+		QueueWorker = require('../../../middleware/rabbitMQ/worker/queue-worker');
 
 describe('rabbitMQ sample', async () => {
 	let queueWorker = new QueueWorker('order-notification', workerConfig, rabbitMqConnection);

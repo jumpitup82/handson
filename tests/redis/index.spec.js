@@ -1,6 +1,6 @@
 const assert = require('assert'),
-		RedisClient = require('../../lib/redis/common/redis-client'),
-		redisConfig = require('../../lib/redis/common/redis-config.json');
+		RedisClient = require('../../middleware/redis/common/redis-client'),
+		redisConfig = require('../../middleware/redis/common/redis-config.json');
 
 describe('redis', () => {
 	const KEY = 'chennai';
